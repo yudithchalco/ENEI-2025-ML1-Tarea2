@@ -17,18 +17,6 @@
 
 2. **Model Derivation and Implementation**
 
-   * Recall:
-     [
-     p(y=1|x) = \sigma(x^\top \beta) = \frac{1}{1 + e^{-x^\top \beta}}
-     ]
-     and
-     [
-     \ell(\beta) = \sum_i [y_i\log p_i + (1 - y_i)\log(1 - p_i)]
-     ]
-   * Derive its gradient:
-     [
-     \nabla_\beta \ell = ???
-     ]
    * Implement gradient descent to maximize the log-likelihood (or equivalently, minimize the negative log-likelihood).
    * Show convergence plots for at least two learning rates.
 
@@ -68,18 +56,7 @@
 
 7. **Theory**
 
-   * For (K) classes:
-     [
-     p(y=k|x) = \frac{e^{x^\top \beta_k}}{\sum_{j=1}^{K} e^{x^\top \beta_j}}
-     ]
-     and
-     [
-     \ell(\beta) = \sum_i \sum_k \mathbf{1}(y_i=k) \log p(y_i=k)
-     ]
-   * Derive the gradient:
-     [
-     \frac{\partial \ell}{\partial \beta_k} = ???
-     ]
+   * Derive the gradient of the log-likelihood function for muticlass classification (check the [notebook for session 4](https://colab.research.google.com/drive/1QKPnTQ_CtqY_4IZHr_dUAzR3nfj8bLbW?usp=sharing))
 
 8. **Implementation**
 
