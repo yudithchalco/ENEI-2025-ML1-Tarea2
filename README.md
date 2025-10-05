@@ -1,6 +1,6 @@
 ## Assignment: Logistic Regression and Multiclass Extensions
 
-**Deadline:** Sunday, October 12th, 2025, 23:59
+**Deadline:** Monday, October 13th, 2025, 23:59
 
 **Environment:** Python, `numpy`, `pandas`, `matplotlib`, `scikit-learn`.
 
