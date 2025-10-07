@@ -17,7 +17,7 @@ from ucimlrepo import fetch_ucirepo
 
 heart_disease = fetch_ucirepo(id = 45)
 X = heart_disease.data.features # features
-Y = heart_disease.data.targets # number of heart disease diagnoses
+Y = heart_disease.data.targets # heart disease diagnosis
 
 ```
   Originally, the Y variable is an integer with varying values. Recode it to be either 0 (when the original value is 0) or 1 (otherwise)
