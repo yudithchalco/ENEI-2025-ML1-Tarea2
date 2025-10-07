@@ -2,25 +2,36 @@
 
 **Deadline:** Monday, October 13th, 2025, 23:59
 
-**Environment:** Python, `numpy`, `pandas`, `matplotlib`, `scikit-learn`.
+**Environment:** Python, `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `ucimlrepo`.
 
 ---
 
 ### Part A. Binary Logistic Regression from Scratch
 
 1. **Dataset**
-   Use the **Heart Disease dataset** from the UCI repository (available via `sklearn.datasets.fetch_openml("heart-disease-uci", as_frame=True)`).
+   Use the **Heart Disease dataset** from the UCI repository. You can do this by running:
+```python
+!pip install ucimlrepo
 
-   * Task: predict whether a patient has heart disease (`target` column).
+from ucimlrepo import fetch_ucirepo
+
+heart_disease = fetch_ucirepo(id = 45)
+X = heart_disease.data.features # features
+Y = heart_disease.data.targets # number of heart disease diagnoses
+
+```
+  Originally, the Y variable is an integer with varying values. Recode it to be either 0 (when the original value is 0) or 1 (otherwise)
+
+   * Task: predict whether a patient has heart disease.
    * Standardize numeric features, one-hot encode categorical ones.
    * Split into 70% train / 30% test.
 
-2. **Model Derivation and Implementation**
+3. **Model Derivation and Implementation**
 
    * Implement gradient descent to maximize the log-likelihood (or equivalently, minimize the negative log-likelihood).
    * Show convergence plots for at least two learning rates.
 
-3. **Evaluation**
+4. **Evaluation**
 
    * Compute accuracy, precision, recall, F1 score in the test set.
    * Compare with `sklearn.linear_model.LogisticRegression`.
